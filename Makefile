@@ -1,0 +1,16 @@
+CC = gcc
+CFLAGS = -ansi -Wall -g -O0 -Wwrite-strings -Wshadow -fstack-protector-all
+LDFLAGS = -lpthread
+PROGS = m_threads
+
+all: m_threads
+
+m_threads: m_threads.o
+	$(CC) $(LDFLAGS) -o  m_threads m_threads.o
+
+m_threads.o: m_threads.c
+	$(CC) $(CFLAGS) -c m_threads.c
+
+clean:
+	@echo "Removing all object files and executables"
+	@rm -f *.o $(PROGS) a.out

@@ -1,0 +1,34 @@
+Thread Report
+
+Intro:
+	Threading allows for concurrency. It allows a process to do multiple
+	things, like execute functions, at the same time. With threads this
+	project we are able to process data concurrently and combine and
+	interpret results at the end of the processing.
+
+Data:
+	Size          Time              # Threads
+		      User Time
+		      
+	999           0.000999		2
+
+	999	      0.000000		4
+
+	999999	      0.003999		2
+
+	999999	      0.002999		6
+
+Report:
+	As the number of threads increases the time taken to process the data
+	decreases. This can be seen in the first and second entries where
+	increasing the number of threads decreases the time taken to process.
+	This can also be seen with the third and fourth entries where the data
+	size is drastically increased and increasing the amount of threads
+	also decreases the time taken to process said data. However, I have
+	noticed that it takes time to create the threads which can cause more
+	Wall and System time and sometimes User time. Another thing that I
+	noticed is that the time it takes to run the threads on the grace
+	system is different based on the other users that are on the server
+	at the same time. This is most likely due to the number of threads
+	and processes that the grace system can be running at one time among
+	all of the users.
